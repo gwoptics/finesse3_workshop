@@ -93,5 +93,5 @@ will be synchronised to the github repo. You can start a manual synchronisation 
 gitlab
 settings](https://gitlab.com/ifosim/finesse/finesse3_workshop/-/settings/repository#js-push-remote-settings)
 The github repo is configured to disallow any pushes. The mirroring depends on a
-[PAT](https://github.com/organizations/gwoptics/settings/personal-access-tokens/766651)
+[PAT](https://github.com/organizations/gwoptics/settings/personal-access-tokens/1600784)
 that expires on Thu, Aug 13 2026
