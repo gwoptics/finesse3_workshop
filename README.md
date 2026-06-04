@@ -42,7 +42,7 @@ If you decide to continue using Finesse, there are currently two options:
   instructions](https://finesse.ifosim.org/docs/latest/installing_finesse.html) for
   installing as a package
 - [Finesse 3 developer
-  guide](https://finesse.ifosim.org/docs/latest/developer/setting_up.html). for playing
+  guide](https://finesse.ifosim.org/docs/develop/developer/index.html). for playing
   around with the source code
 
 In either case, feel free to get in touch!
