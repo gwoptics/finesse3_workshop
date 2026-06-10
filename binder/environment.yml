@@ -4,3 +4,7 @@ channels:
 dependencies:
   - python=3.14
   - finesse
+  # ifotools for yashwants notebook
+  - pip:
+    - git+https://gitlab.com/ifosim/ifotools.git@dbb86e36512178b2e02096b8b54311bbfd1e282f
+
