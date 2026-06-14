@@ -43,7 +43,6 @@ If you want to try out running these notebooks on your own machine, the followin
 3) Get the notebooks<br>
 Workshop notebooks:<br>
 ```git clone https://gitlab.com/ifosim/finesse/finesse3_workshop.git```
-<br>
 And/or the basic "getting started" repo:<br>
 ```git clone https://gitlab.com/ifosim/finesse/finesse3_getting_started.git```
 
