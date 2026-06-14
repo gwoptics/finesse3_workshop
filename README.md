@@ -35,8 +35,7 @@ If you want to try out running these notebooks on your own machine, the followin
 2) Install Finesse and required Packages:
 
   ```
-  conda create -n finesse_workshop -c
-  conda-forge finesse pip
+  conda create -n finesse_workshop -c conda-forge finesse pip
   conda activate finesse_workshop
   pip install git+https://gitlab.com/ifosim/ifotools.git
   ```
