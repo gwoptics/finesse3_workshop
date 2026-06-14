@@ -27,6 +27,29 @@ pre-installed.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gwoptics/finesse3_workshop/HEAD)
 
+## Running the notebooks of your computer
+
+If you want to try out running these notebooks on your own machine, the following commands are the fastest way to install the necessary software. Please see the documentation in the Finesse manual for more information (https://finesse.ifosim.org/docs/latest/install).
+
+1. Install conda (we recommend Miniforge from  https://conda-forge.org/download/)
+2) Install Finesse and required Packages:
+
+  ```
+  conda create -n finesse_workshop -c
+  conda-forge finesse pip
+  conda activate finesse_workshop
+  pip install git+https://gitlab.com/ifosim/ifotools.git
+  ```
+3) Get the notebooks<br>
+Workshop notebooks:<br>
+```git clone https://gitlab.com/ifosim/finesse/finesse3_workshop.git```
+<br>
+And/or the basic "getting started" repo:<br>
+```git clone https://gitlab.com/ifosim/finesse/finesse3_getting_started.git```
+
+4) All ready!<br>
+You can now run the notebooks locally, for example with JupyterLab or VS Code.
+
 ## About
 
 [Finesse 3](https://finesse.ifosim.org/) (Frequency domain INterfErometer Simulation
