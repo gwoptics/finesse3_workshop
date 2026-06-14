@@ -27,12 +27,12 @@ pre-installed.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gwoptics/finesse3_workshop/HEAD)
 
-## Running the notebooks of your computer
+## Running the notebooks on your own computer
 
 If you want to try out running these notebooks on your own machine, the following commands are the fastest way to install the necessary software. Please see the documentation in the Finesse manual for more information (https://finesse.ifosim.org/docs/latest/install).
 
 1. Install conda (we recommend Miniforge from  https://conda-forge.org/download/)
-2) Install Finesse and required Packages:
+2) Install Finesse and required packages:
 
   ```
   conda create -n finesse_workshop -c conda-forge finesse pip
