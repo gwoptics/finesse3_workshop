@@ -1,0 +1,19 @@
+# Cavities
+# For any simulation involving higher oder modes
+# the cavities must be defined in this case parsed
+# into your virgo model.
+
+# Cavities
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+# Arms
+cav cavW WE.p1.o priority=4
+cav cavN NE.p1.o priority=4
+
+# PRC
+cav cavPRW PR.p2.o via=WE.p1.i priority=3
+cav cavPRN PR.p2.o via=NE.p1.i priority=3
+
+# SRC
+cav cavSRW SR.p1.o via=WE.p1.i priority=2
+cav cavSRN SR.p1.o via=NE.p1.i priority=2

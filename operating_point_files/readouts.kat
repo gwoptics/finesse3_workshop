@@ -1,0 +1,64 @@
+# Control readouts
+#------------------------------------------------
+
+# DC Readouts
+#------------------------------------------------
+readout_dc INJ FI.p3.o output_detectors=True
+readout_dc B2 B2_attenuator.p2.o output_detectors=True
+readout_dc B4 B4_attenuator.p2.o output_detectors=True
+readout_dc B5 BSAR2.p3.o output_detectors=True
+readout_dc B7 NEAR.p2.o output_detectors=True
+readout_dc B8 WEAR.p2.o output_detectors=True
+readout_dc B1p SRAR.p2.o output_detectors=True 
+readout_dc Wcirc WE.p1.o output_detectors=True
+readout_dc Ncirc NE.p1.o output_detectors=True
+readout_dc Pcirc PR.p2.o output_detectors=True
+
+# RF Readouts
+#------------------------------------------------
+# B2
+#------------------------------------------------
+# 1f
+readout_rf B2_6 B2_attenuator.p2.o f=eom6.f output_detectors=True
+readout_rf B2_8 B2_attenuator.p2.o f=eom8.f phase=0 output_detectors=True 
+readout_rf B2_56 B2_attenuator.p2.o f=eom56.f phase=0 output_detectors=True 
+readout_rf B2_56_2 B2_attenuator.p2.o f=eom56.f phase=0 output_detectors=True 
+# 2f
+readout_rf B2_12 B2_attenuator.p2.o f=2*eom6.f output_detectors=True
+readout_rf B2_16 B2_attenuator.p2.o f=2*eom8.f phase=0 output_detectors=True
+readout_rf B2_112 B2_attenuator.p2.o f=2*eom56.f phase=0 output_detectors=True
+# 3f
+readout_rf B2_18 B2_attenuator.p2.o f=3*eom6.f output_detectors=True
+readout_rf B2_24 B2_attenuator.p2.o f=3*eom8.f phase=0 output_detectors=True
+readout_rf B2_168 B2_attenuator.p2.o f=3*eom56.f phase=0 output_detectors=True
+readout_rf B2_168_2 B2_attenuator.p2.o f=3*eom56.f phase=0 output_detectors=True
+
+# B4
+#------------------------------------------------
+# 1f
+readout_rf B4_6 B4_attenuator.p2.o f=eom6.f output_detectors=True
+readout_rf B4_56 B4_attenuator.p2.o f=eom56.f phase=0 output_detectors=True 
+# 2f
+readout_rf B4_12 B4_attenuator.p2.o f=2*eom6.f output_detectors=True
+readout_rf B4_112 B4_attenuator.p2.o f=2*eom56.f phase=0 output_detectors=True
+# 3f
+readout_rf B4_18 B4_attenuator.p2.o f=3*eom6.f output_detectors=True
+readout_rf B4_168 B4_attenuator.p2.o f=3*eom56.f phase=0 output_detectors=True
+
+# B1p
+#------------------------------------------------
+# 1f
+readout_rf B1p_6 SRAR.p2.o f=eom6.f output_detectors=True
+readout_rf B1p_56 SRAR.p2.o f=eom56.f phase=0 output_detectors=True 
+# 2f
+readout_rf B1p_12 SRAR.p2.o f=2*eom6.f output_detectors=True
+readout_rf B1p_112 SRAR.p2.o f=2*eom56.f phase=0 output_detectors=True
+# 3f
+readout_rf B1p_18 SRAR.p2.o f=3*eom6.f output_detectors=True
+readout_rf B1p_168 SRAR.p2.o f=3*eom56.f phase=0 output_detectors=True
+
+
+
+
+
+ 

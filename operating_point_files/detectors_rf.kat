@@ -1,0 +1,46 @@
+## Detectors for Advanced Virgo Model
+
+# B2 readout with higher harmonics of the sidebands
+# -------------------------------------------------------------------------
+# 8 MHz sidebands and 2f, 3f harmonics
+pd1 b2_8 B2_attenuator.p2.o eom8.f
+pd1 b2_16 B2_attenuator.p2.o 2*eom8.f
+pd1 b2_24 B2_attenuator.p2.o 3*eom8.f
+
+# 6 MHz sidebands and 2f, 3f harmonics
+pd1 b2_6 B2_attenuator.p2.o eom6.f
+pd1 b2_12 B2_attenuator.p2.o 2*eom6.f
+pd1 b2_18 B2_attenuator.p2.o 3*eom6.f
+
+# 56 MHz sidebands and 2f, 3f harmonics
+pd1 b2_56 B2_attenuator.p2.o eom56.f
+pd1 b2_112 B2_attenuator.p2.o 2*eom56.f
+pd1 b2_168 B2_attenuator.p2.o 3*eom56.f
+
+# B4 readout with higher harmonics of the sidebands
+# -------------------------------------------------------------------------
+
+# 6 MHz sidebands and 2f, 3f harmonics
+pd1 b4_6 B4_attenuator.p2.o eom6.f
+pd1 b4_12 B4_attenuator.p2.o 2*eom6.f
+pd1 b4_18 B4_attenuator.p2.o 3*eom6.f
+
+# 56 MHz sidebands and 2f, 3f harmonics
+pd1 b4_56 B4_attenuator.p2.o eom56.f
+pd1 b4_112 B4_attenuator.p2.o 2*eom56.f
+pd1 b4_168 B4_attenuator.p2.o 3*eom56.f
+
+# B1p readout with higher harmonics of the sidebands
+# -------------------------------------------------------------------------
+
+# 6 MHz sidebands and 2f, 3f harmonics
+pd1 b1p_6 SRAR.p2.o eom6.f
+pd1 b1p_12 SRAR.p2.o 2*eom6.f
+pd1 b1p_18 SRAR.p2.o 3*eom6.f
+
+# 56 MHz sidebands and 2f, 3f harmonics
+pd1 b1p_56 SRAR.p2.o eom56.f
+pd1 b1p_112 SRAR.p2.o 2*eom56.f
+pd1 b1p_168 SRAR.p2.o 3*eom56.f
+
+

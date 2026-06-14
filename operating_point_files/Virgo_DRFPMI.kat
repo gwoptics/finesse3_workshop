@@ -1,0 +1,121 @@
+# Optics of the Advanced Virgo DRFPMI
+# --------------------------------------------------------------------------
+
+# Variables for few parameters used in the model
+#--------------------------------------------------------------------------
+var f6 6270777             # 6 MHz (Modulation frequency)
+var f8 4/3*f6              # 8 MHz
+var f56 9*f6               # 56 MHz
+var nsilica 1.44963
+var f_CPN_TL -338008.0     # North CP lens
+var f_CPW_TL -353134.0     # West CP lens
+var rocWE 1695             # RoC for all mirrors (m)
+var rocNE 1692.2
+var rocWI -1424.56
+var rocNI -1424.58
+var rocPR -1430 
+var rocSR 1430
+var rocPRAR -3.62 
+var rocSRAR 3.62
+
+# Input optics
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+# Laser and modulators
+laser l1 P=17.0 
+s s0 l1.p1 eom6.p1 L=1m
+mod eom6 f=f6 midx=0.22 order=3
+s sEOM6 eom6.p2 eom8.p1 L=0.1
+mod eom8 f=f8 midx=0.15 order=3
+s sEOM8 eom8.p2 eom56.p1 L=0.1
+mod eom56 f=f56 midx=0.25 order=3
+
+# B2 readout
+s s1 eom56.p2 FI.p1 L=0.2
+dbs FI 
+s s2 FI.p3 PRAR.p1 L=0
+s s3 FI.p4 B2_attenuator.p1 L=0.1
+bs B2_attenuator R=0.99816 T=0.00184
+
+# PRC + POP
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+# PRM
+m PRAR R=0.0 L=160u Rc=rocPRAR misaligned=True 
+s sPRsub PRAR.p2 PR.p1 L=0.10030 nr=nsilica 
+m PR T=0.04835 L=0.29u Rc=rocPR 
+s lPR_POP PR.p2 POP_AR.p1 L=0.06 
+
+# POP
+bs POP_AR R=0.0 L=125u alpha=6.0
+s sPOPsub POP_AR.p3 POP.p1 L=0.03549 nr=nsilica
+bs POP R=184u L=0.0 alpha=4.135015
+
+## B4 readout
+s sB4_att POP.p4 B4_attenuator.p1
+bs B4_attenuator R=0.7344 T=0.2656 
+
+# BS
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+s lPOP_BS POP.p3 BS.p1 L=5.9402  
+bs BS T=0.5012 L=1u alpha=-45.0
+s sBSsub1 BS.p3 BSAR1.p1 L=0.074459 nr=nsilica
+s sBSsub2 BS.p4 BSAR2.p1 L=0.074459 nr=nsilica
+bs BSAR1 R=329u L=0 alpha=-29.1951
+bs BSAR2 R=329u L=0 alpha=-29.1951
+
+# North arm 
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+# CP north arm
+s lBS_CPN BSAR1.p3 CPN1.p1 L=5.367 
+m CPN1 R=0.0 L=114u 
+s sCPNsub CPN1.p2 CPN2.p1 L=0.03541 nr=nsilica 
+m CPN2 R=0.0 L=87u 
+lens CPN_TL f=f_CPN_TL 
+link(CPN2, CPN_TL)
+s sCPN_NI CPN_TL.p2 NIAR.p1 L=0.2 
+
+# North input mirror
+m NIAR R=32u L=0.0 Rc=NI.Rc phi=NI.phi
+s sNIsub NIAR.p2 NI.p1 L=0.20026 nr=nsilica
+m NI T=0.01377 L=0.19u Rc=rocNI
+s LN NI.p2 NE.p1 L=2999.8203 
+
+# North end mirror
+m NE T=3.39u L=0.21u Rc=rocNE 
+s sNEsub NE.p2 NEAR.p1 L=0.19925 nr=nsilica
+m NEAR R=0.0 L=107u misaligned=True
+
+# West Arm
+# --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+
+# CP west arm
+s lBS_CPW BS.p2 CPW1.p1 L=5.245 
+m CPW1 R=0.0 L=44u 
+s sCPWsub CPW1.p2 CPW2.p1 L=0.03539 nr=nsilica
+m CPW2 R=0.0 L=22u 
+lens CPW_TL f=f_CPW_TL 
+link(CPW2, CPW_TL)
+s sCPW_WI CPW_TL.p2 WIAR.p1 L=0.2 
+
+# West input mirror
+m WIAR R=58u L=0.0 Rc=WI.Rc phi=WI.phi
+s sWIsub WIAR.p2 WI.p1 L=0.20031 nr=nsilica
+m WI T=0.01375 L=0.22u Rc=rocWI
+s LW WI.p2 WE.p1 L=2999.7884 
+
+# West end mirror
+m WE T=4.4u L=0.24u Rc=rocWE
+s sWEsub WE.p2 WEAR.p1 L=0.20041 nr=nsilica
+m WEAR R=0.0 L=133u misaligned=True
+
+# SRM
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+s lsr BSAR2.p3 SR.p1 L=5.943 
+m SR T=0.3960 L=1.2u Rc=rocSR
+s sSRsub SR.p2 SRAR.p1 L=0.10042 nr=nsilica
+m SRAR R=0.0 L=151u Rc=rocSRAR misaligned=True

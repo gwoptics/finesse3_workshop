@@ -1,0 +1,203 @@
+#--------------------------------------------------------------------
+# ET-LF
+#
+# 2024 design update, ET-XXXXXX
+# based on earlier work by Vaishali Adhya, Andreas Freise, 
+# and RC telescope design by Sam Rowlinson et al. (LIGO-P2000417 / PRD 103:023004 (2021))
+#
+# Anna Green 29 May 2024
+# contains only the core DRFPMi, no controls scheme, 
+# details (or lack of) exactly as in design doc
+#
+# ToDo: check all R,T,L values match 2020
+#--------------------------------------------------------------------
+
+# variables
+######################################################################
+var nsilica 1.4499
+var nsilicon 3.4467
+var Mmass 211
+var SRdetuning 17.2
+var Larm 10.07k 
+var Mloss 37.5u
+lambda(value=1550e-9)
+
+## references:
+# nsilica: https://www.heraeus-conamic.com/media/Media/Documents/Products_and_Solutions/OPT/EN/Data_and_Properties_Optics_fused_silica_EN.pdf
+# nsilicon:  refractiveindex.info (for 1550nm at 100K - consistent with 3.45 in 2010 study)
+######################################################################
+
+# laser
+######################################################################
+l L0 P=3
+######################################################################
+
+# PRC
+######################################################################
+s lPRCin L0.p1 PRMAR.p1
+
+## PRM
+m PRMAR R=0 L=40u
+s lPRMsub1 PRMAR.p2 PRM.p1 nr=nsilicon #copied from 2020 design model
+m PRM T=0.046 L=Mloss phi=0 Rc=-1010.9942484479249
+
+s lPRM_BS PRM.p2 BS.p1 L=10
+######################################################################
+
+# beamsplitter
+######################################################################
+##                             ^
+##                     to ITMY |
+##                             |      ,'-.
+##                             |     +    `.
+##                       BS.p2 |   ,'       :'
+##                             |  +        +
+##         ---------------->    ,:._     ,'
+##    from the PRM       BS.p1 + \  `-. + BSARX.p3
+##                           ,'   \   ,' --------------->
+##                          +      \ +             to ITMX
+##                        ,'       .'
+##                       `._      ..
+##                          `._ ,' |BSARS.p3
+##                             -   |
+##                                 |to the SEM
+##                                 |
+##                                 v
+
+bs BS R=0.5 L=Mloss alpha=60 phi=0
+s BSsub1 BS.p3 BSARX.p1 L=0.07481130437427354 nr=nsilica
+s BSsub2 BS.p4 BSARS.p1 L=0.07481130437427354 nr=nsilica
+bs BSARX R=50u L=0 alpha=-36.676774737277896
+bs BSARS R=50u L=0 alpha=36.676774737277896
+
+## references:
+#angles: computed assuming alpha=60, BS_thickness=0.06m, nr=nsilica
+######################################################################
+
+# Y arm
+######################################################################
+
+# Y telescope
+s lBS_ZY1 BS.p2 ZY1.p1 L=56.0
+bs ZY1 T=0 L=Mloss alpha=2.5 Rc=-47.169708251953125
+s lZY1_ZY2 ZY1.p2 ZY2.p1 L=45
+bs ZY2 T=0 L=Mloss alpha=-2.5 Rc=-103.8728410315853
+s lZY2_ITMY ZY2.p2 ITMYAR.p1 L=54.0
+
+#ITMY
+m ITMYAR R=0 T=0.99998 L=20u phi=0 Rc=-194.33796136778244
+s ITMYsub ITMYAR.p2 ITMY.p1 L=0.57 nr=nsilicon
+m ITMY T=7000e-6 L=Mloss phi=0 Rc=-5580.0
+free_mass ITMY_sus ITMY.mech mass=Mmass
+
+s LY ITMY.p2 ETMY.p1 L=10.07k
+
+#ETMY
+m ETMY T=6u L=Mloss phi=0 Rc=5580.0
+s ETMYsub ETMY.p2 ETMYAR.p1 L=0.2 nr=nsilicon #copied from 2020 design model
+m ETMYAR R=0 L=500u 
+free_mass ETMY_sus ETMY.mech mass=Mmass
+
+## references:
+# ITM substrate thickness=0.57m: PBS / ET design study
+######################################################################
+
+# X arm
+######################################################################
+
+# X telescope
+s lBS_ZX1 BSARX.p3 ZX1.p1 L=56.0
+bs ZX1 T=0 L=Mloss alpha=2.5 Rc=-47.169708251953125
+s lZX1_ZX2 ZX1.p2 ZX2.p1 L=45
+bs ZX2 T=0 L=Mloss alpha=-2.5 Rc=-103.8728410315853
+s lZX2_ITMX ZX2.p2 ITMXAR.p1 L=54.0
+
+#ITMX
+m ITMXAR R=0 L=20u phi=0 Rc=-194.33796136778244
+s ITMXsub ITMXAR.p2 ITMX.p1 L=0.57 nr=nsilicon
+m ITMX T=7000e-6 L=Mloss phi=0 Rc=-5580.0
+free_mass ITMX_sus ETMX.mech mass=Mmass
+
+s LX ITMX.p2 ETMX.p1 L=Larm
+
+#ETMX
+m ETMX T=6u L=Mloss phi=0 Rc=5580.0
+s ETMXsub ETMX.p2 ETMXAR.p1 L=0.2 nr=nsilicon #copied from 2020 design model
+m ETMXAR R=0 L=500u 
+free_mass ETMX_sus ITMX.mech mass=Mmass
+
+## references:
+# ITM substrate thickness=0.57m: PBS / ET design study
+######################################################################
+
+# SEC
+######################################################################
+s lSEM_BS SEM.p1 BSARS.p3 L=10
+
+#SEM
+m SEM T=0.1 L=Mloss phi=90 Rc=1010.9942484479249
+s SEMsub SEM.p2 SEMAR.p1 L=0.0749 nr=nsilicon #copied from 2020 design model
+m SEMAR R=0 L=50n
+######################################################################
+
+# OFI
+######################################################################
+## Directional beam splitter (ideal Faraday Isolator with 4 ports)
+## ----------------------------------------------------------------
+## Description of node connections, inputNode --> outputNode
+## --
+## p1.i --> p3.o (SEM>OMC)
+## p2.i --> p1.o (Filter(s)>SEM)
+## p3.i --> p4.o (OMC>SQZ)
+## p4.i --> p2.o (SQZ>Filter)
+
+s lSEM_OFI SEMAR.p2 OFI.p1 L=1
+dbs OFI 
+######################################################################
+
+# Squeezing
+######################################################################
+
+sq SQZ db=10 angle=0
+
+#frequency *independent* squeezing path
+s lsqz_ofi SQZ.p1 OFI.p2 
+######################################################################
+
+# OMC
+######################################################################
+######################################################################
+
+# Homodyne readout
+######################################################################
+#simple, 'dummy' / 'work-around' BHD readout
+s lHD1 OFI.p3 BHDBS.p1 L=1
+bs BHDBS T=1e-14 L=0 phi=45 alpha=0
+s lHD2 BHDBS.p4 LO.p1 L=1n
+l LO P=1e14 phase=90
+
+## references:
+# 'work-around' BHD: https://git.ligo.org/IFOsim/finesse-post-o5-thermal-modelling/-/blob/master/thermal_models.py line 285
+#                    and https://chat.ligo.org/ligo/pl/brexh84aa3dmpmxudg5kutpy5e
+######################################################################
+
+# Cavities
+######################################################################
+cav cavXARM ITMX.p2.o
+cav cavYARM ITMY.p2.o
+cav cavSEX SEM.p1.o via=ITMX.p1.i
+cav cavSEY SEM.p1.o via=ITMY.p1.i
+cav cavPRX PRM.p2.o via=ITMX.p1.i
+cav cavPRY PRM.p2.o via=ITMY.p1.i
+######################################################################
+
+# power detectors
+######################################################################
+pd PTX ETMXAR.p2.o        #trans X
+pd PTY ETMYAR.p2.o        #trans Y
+pd PcX ETMX.p1.o          #circ X
+pd PcY ETMY.p1.o          #circ Y
+pd PTAS SEMAR.p2.o        #AS out
+pd Pprc BS.p1.i           #PRC power before BS
+pd Psrc BSARS.p3.o        #SRC power after BS
+######################################################################

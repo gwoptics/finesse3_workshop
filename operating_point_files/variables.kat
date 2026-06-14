@@ -1,0 +1,23 @@
+# Variables
+#--------------------------------------------------------------------------
+#--------------------------------------------------------------------------
+# Useful lengths of the IFO
+var lpr (lPR_POP.L + sPOPsub.L * sPOPsub.nr + lPOP_BS.L)
+var lsrbs (lsr.L + sBSsub2.L * sBSsub2.nr) 
+var ln (sBSsub1.L * sBSsub1.nr + lBS_CPN.L + sCPNsub.L * sCPNsub.nr + sCPN_NI.L + sNIsub.L * sNIsub.nr)
+var lw (lBS_CPW.L + sCPWsub.L * sCPWsub.nr + sCPW_WI.L + sWIsub.L * sWIsub.nr)
+var lMI (0.5 * (ln + lw)) #Michelson length
+var lPRC (lpr + lMI) #PRC total length
+var lSRC (lsrbs + lMI) #SRC total length
+var lSchnupp (ln - lw) #Schnupp assymetry
+var lnarm (LN.L)
+var lwarm (LW.L)
+
+# Useful frequencies if the IFO
+var fsrN (0.5 * c0 / LN.L)
+var fsrW (0.5 * c0 / LW.L)
+var fsrPRC (0.5 * c0 / lPRC) #Based on optical design
+var fsrSRC (0.5 * c0 / lSRC)
+var f1_arm (125.5 * fsrN - 300.0)  
+var f1_SRC (3.5 * fsrN)
+var f1_PRC (3.5 * fsrN)
