@@ -1,0 +1,14 @@
+# Longitudinal dofs for locks and control
+dof MICH NI.dofs.z -1 NE.dofs.z -1 WI.dofs.z +1 WE.dofs.z +1 
+dof DARM NE.dofs.z -1  WE.dofs.z +1 
+dof CARM NE.dofs.z +1  WE.dofs.z +1 
+dof PRCL PR.dofs.z +1
+dof SRCL SR.dofs.z -1
+
+# Individual mirror motions
+dof NE_z NE.dofs.z +1
+dof NI_z NI.dofs.z +1
+dof WE_z WE.dofs.z +1
+dof WI_z WI.dofs.z +1
+dof PR_z PR.dofs.z +1
+dof SR_z SR.dofs.z +1
