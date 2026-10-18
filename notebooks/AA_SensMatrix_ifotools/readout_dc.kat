@@ -1,0 +1,6 @@
+readout_dc B2  B2_pickoff.p4.o   output_detectors=true
+readout_dc B4  PRM2.p3.o         output_detectors=true
+readout_dc B1p B1p_pickoff.p2.o  output_detectors=true
+readout_dc B6  SRM2.p1.o         output_detectors=true
+readout_dc B7  NETM.p2.o         output_detectors=true
+readout_dc B8  WETM.p2.o         output_detectors=true

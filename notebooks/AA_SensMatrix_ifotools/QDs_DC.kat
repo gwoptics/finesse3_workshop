@@ -1,0 +1,19 @@
+## B7
+pd B7_nf_DC B7_nf_port.p1.i pdtype=xsplit
+pd B7_ff_DC B7_ff_port.p1.i pdtype=xsplit
+
+## B8
+pd B8_nf_DC B8_nf_port.p1.i pdtype=xsplit
+pd B8_ff_DC B8_ff_port.p1.i pdtype=xsplit
+
+## B2
+pd B2_nf_DC B2_nf_port.p1.i pdtype=xsplit
+pd B2_ff_DC B2_ff_port.p1.i pdtype=xsplit
+
+## B4
+pd B4_nf_DC B4_nf_port.p1.i pdtype=xsplit
+pd B4_ff_DC B4_ff_port.p1.i pdtype=xsplit
+
+## B1p
+pd B1p_nf_DC B1p_nf_port.p1.i pdtype=xsplit
+pd B1p_ff_DC B1p_ff_port.p1.i pdtype=xsplit

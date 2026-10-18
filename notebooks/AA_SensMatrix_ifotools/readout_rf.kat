@@ -1,0 +1,19 @@
+readout_rf B2_SB1  B2_pickoff.p4.o  f=eom1.f phase=0 output_detectors=true
+readout_rf B2_SB2  B2_pickoff.p4.o  f=eom2.f phase=0 output_detectors=true
+readout_rf B2_SB4  B2_pickoff.p4.o  f=eom4.f phase=0 output_detectors=true
+
+readout_rf B4_SB1  PRM2.p3.o        f=eom1.f phase=0 output_detectors=true
+readout_rf B4_SB2  PRM2.p3.o        f=eom2.f phase=0 output_detectors=true
+readout_rf B4_SB4  PRM2.p3.o        f=eom4.f phase=0 output_detectors=true
+
+readout_rf B1p_SB1 B1p_pickoff.p2.o f=eom1.f phase=0 output_detectors=true
+readout_rf B1p_SB2 B1p_pickoff.p2.o f=eom2.f phase=0 output_detectors=true
+readout_rf B1p_SB4 B1p_pickoff.p2.o f=eom4.f phase=0 output_detectors=true
+
+readout_rf B7_SB1  NETM.p2.o        f=eom1.f phase=0 output_detectors=true
+readout_rf B8_SB1  WETM.p2.o        f=eom1.f phase=0 output_detectors=true
+
+readout_rf B6_SB1  SRM2.p1.o        f=eom1.f phase=0 output_detectors=true
+readout_rf B6_SB2  SRM2.p1.o        f=eom2.f phase=0 output_detectors=true
+readout_rf B6_SB4  SRM2.p1.o        f=eom4.f phase=0 output_detectors=true
+

@@ -1,0 +1,95 @@
+#### Intra-cavity detectors
+
+## PRC detectors
+
+ad PRC_CAR_00 PRM1.p2.o 0
+ad PRC_CAR_10 PRM1.p2.o 0 1 0
+ad PRC_CAR_01 PRM1.p2.o 0 0 1
+ad PRC_CAR_20 PRM1.p2.o 0 2 0
+ad PRC_CAR_02 PRM1.p2.o 0 0 2
+
+ad PRC_USB1_00 PRM1.p2.o eom1.f 0 0
+ad PRC_USB1_10 PRM1.p2.o eom1.f 1 0
+ad PRC_USB1_01 PRM1.p2.o eom1.f 0 1
+ad PRC_USB1_20 PRM1.p2.o eom1.f 2 0
+ad PRC_USB1_02 PRM1.p2.o eom1.f 0 2
+ad PRC_LSB1_00 PRM1.p2.o -eom1.f 0 0
+ad PRC_LSB1_10 PRM1.p2.o -eom1.f 1 0
+ad PRC_LSB1_01 PRM1.p2.o -eom1.f 0 1
+ad PRC_LSB1_20 PRM1.p2.o -eom1.f 2 0
+ad PRC_LSB1_02 PRM1.p2.o -eom1.f 0 2
+
+ad PRC_USB2_00 PRM1.p2.o eom2.f 0 0
+ad PRC_USB2_10 PRM1.p2.o eom2.f 1 0
+ad PRC_USB2_01 PRM1.p2.o eom2.f 0 1
+ad PRC_USB2_20 PRM1.p2.o eom2.f 2 0
+ad PRC_USB2_02 PRM1.p2.o eom2.f 0 2
+ad PRC_LSB2_00 PRM1.p2.o -eom2.f 0 0
+ad PRC_LSB2_10 PRM1.p2.o -eom2.f 1 0
+ad PRC_LSB2_01 PRM1.p2.o -eom2.f 0 1
+ad PRC_LSB2_20 PRM1.p2.o -eom2.f 2 0
+ad PRC_LSB2_02 PRM1.p2.o -eom2.f 0 2
+
+ad PRC_USB4_00 PRM1.p2.o eom4.f 0 0
+ad PRC_USB4_10 PRM1.p2.o eom4.f 1 0
+ad PRC_USB4_01 PRM1.p2.o eom4.f 0 1
+ad PRC_USB4_20 PRM1.p2.o eom4.f 2 0
+ad PRC_USB4_02 PRM1.p2.o eom4.f 0 2
+ad PRC_LSB4_00 PRM1.p2.o -eom4.f 0 0
+ad PRC_LSB4_10 PRM1.p2.o -eom4.f 1 0
+ad PRC_LSB4_01 PRM1.p2.o -eom4.f 0 1
+ad PRC_LSB4_20 PRM1.p2.o -eom4.f 2 0
+ad PRC_LSB4_02 PRM1.p2.o -eom4.f 0 2
+
+
+## SRC detectors
+
+ad SRC_CAR_00 SRM1.p1.o 0
+ad SRC_CAR_10 SRM1.p1.o 0 1 0
+ad SRC_CAR_01 SRM1.p1.o 0 0 1
+ad SRC_CAR_20 SRM1.p1.o 0 2 0
+ad SRC_CAR_02 SRM1.p1.o 0 0 2
+
+ad SRC_USB1_00 SRM1.p1.o eom1.f 0 0
+ad SRC_USB1_10 SRM1.p1.o eom1.f 1 0
+ad SRC_USB1_01 SRM1.p1.o eom1.f 0 1
+ad SRC_USB1_20 SRM1.p1.o eom1.f 2 0
+ad SRC_USB1_02 SRM1.p1.o eom1.f 0 2
+ad SRC_LSB1_00 SRM1.p1.o -eom1.f 0 0
+ad SRC_LSB1_10 SRM1.p1.o -eom1.f 1 0
+ad SRC_LSB1_01 SRM1.p1.o -eom1.f 0 1
+ad SRC_LSB1_20 SRM1.p1.o -eom1.f 2 0
+ad SRC_LSB1_02 SRM1.p1.o -eom1.f 0 2
+
+ad SRC_USB2_00 SRM1.p1.o eom2.f 0 0
+ad SRC_USB2_10 SRM1.p1.o eom2.f 1 0
+ad SRC_USB2_01 SRM1.p1.o eom2.f 0 1
+ad SRC_USB2_20 SRM1.p1.o eom2.f 2 0
+ad SRC_USB2_02 SRM1.p1.o eom2.f 0 2
+ad SRC_LSB2_00 SRM1.p1.o -eom2.f 0 0
+ad SRC_LSB2_10 SRM1.p1.o -eom2.f 1 0
+ad SRC_LSB2_01 SRM1.p1.o -eom2.f 0 1
+ad SRC_LSB2_20 SRM1.p1.o -eom2.f 2 0
+ad SRC_LSB2_02 SRM1.p1.o -eom2.f 0 2
+
+ad SRC_USB3_00 SRM1.p1.o eom3.f 0 0
+ad SRC_USB3_10 SRM1.p1.o eom3.f 1 0
+ad SRC_USB3_01 SRM1.p1.o eom3.f 0 1
+ad SRC_USB3_20 SRM1.p1.o eom3.f 2 0
+ad SRC_USB3_02 SRM1.p1.o eom3.f 0 2
+ad SRC_LSB3_00 SRM1.p1.o -eom3.f 0 0
+ad SRC_LSB3_10 SRM1.p1.o -eom3.f 1 0
+ad SRC_LSB3_01 SRM1.p1.o -eom3.f 0 1
+ad SRC_LSB3_20 SRM1.p1.o -eom3.f 2 0
+ad SRC_LSB3_02 SRM1.p1.o -eom3.f 0 2
+
+ad SRC_USB4_00 SRM1.p1.o eom4.f 0 0
+ad SRC_USB4_10 SRM1.p1.o eom4.f 1 0
+ad SRC_USB4_01 SRM1.p1.o eom4.f 0 1
+ad SRC_USB4_20 SRM1.p1.o eom4.f 2 0
+ad SRC_USB4_02 SRM1.p1.o eom4.f 0 2
+ad SRC_LSB4_00 SRM1.p1.o -eom4.f 0 0
+ad SRC_LSB4_10 SRM1.p1.o -eom4.f 1 0
+ad SRC_LSB4_01 SRM1.p1.o -eom4.f 0 1
+ad SRC_LSB4_20 SRM1.p1.o -eom4.f 2 0
+ad SRC_LSB4_02 SRM1.p1.o -eom4.f 0 2

@@ -1,0 +1,128 @@
+#### HOMs detectors:
+## Carrier
+
+ad B2_CAR_10 PRM2.p1.o 0 1 0
+ad B2_CAR_01 PRM2.p1.o 0 0 1
+ad B2_CAR_20 PRM2.p1.o 0 2 0
+ad B2_CAR_02 PRM2.p1.o 0 0 2
+
+ad B4_CAR_10 PRM2.p3.o 0 1 0
+ad B4_CAR_01 PRM2.p3.o 0 0 1
+ad B4_CAR_20 PRM2.p3.o 0 2 0
+ad B4_CAR_02 PRM2.p3.o 0 0 2
+
+ad B7_CAR_10 NETM.p1.o 0 1 0
+ad B7_CAR_01 NETM.p1.o 0 0 1
+ad B7_CAR_20 NETM.p1.o 0 2 0
+ad B7_CAR_02 NETM.p1.o 0 0 2
+
+ad B8_CAR_10 WETM.p1.o 0 1 0
+ad B8_CAR_01 WETM.p1.o 0 0 1
+ad B8_CAR_20 WETM.p1.o 0 2 0
+ad B8_CAR_02 WETM.p1.o 0 0 2
+
+ad B1p_CAR_10 SRM1.p2.o 0 1 0
+ad B1p_CAR_01 SRM1.p2.o 0 0 1
+ad B1p_CAR_20 SRM1.p2.o 0 2 0
+ad B1p_CAR_02 SRM1.p2.o 0 0 2
+
+
+## B2
+ad B2_USB1_10 PRM1.p1.o eom1.f 1 0
+ad B2_USB1_01 PRM1.p1.o eom1.f 0 1
+ad B2_USB1_20 PRM1.p1.o eom1.f 2 0
+ad B2_USB1_02 PRM1.p1.o eom1.f 0 2
+
+ad B2_LSB1_10 PRM1.p1.o -eom1.f 1 0
+ad B2_LSB1_01 PRM1.p1.o -eom1.f 0 1
+ad B2_LSB1_20 PRM1.p1.o -eom1.f 2 0
+ad B2_LSB1_02 PRM1.p1.o -eom1.f 0 2
+
+ad B2_USB2_10 PRM1.p1.o eom2.f 1 0
+ad B2_USB2_01 PRM1.p1.o eom2.f 0 1
+ad B2_USB2_20 PRM1.p1.o eom2.f 2 0
+ad B2_USB2_02 PRM1.p1.o eom2.f 0 2
+
+ad B2_LSB2_10 PRM1.p1.o -eom2.f 1 0
+ad B2_LSB2_01 PRM1.p1.o -eom2.f 0 1
+ad B2_LSB2_20 PRM1.p1.o -eom2.f 2 0
+ad B2_LSB2_02 PRM1.p1.o -eom2.f 0 2
+
+ad B2_USB4_10 PRM1.p1.o eom4.f 1 0
+ad B2_USB4_01 PRM1.p1.o eom4.f 0 1
+ad B2_USB4_20 PRM1.p1.o eom4.f 2 0
+ad B2_USB4_02 PRM1.p1.o eom4.f 0 2
+
+ad B2_LSB4_10 PRM1.p1.o -eom4.f 1 0
+ad B2_LSB4_01 PRM1.p1.o -eom4.f 0 1
+ad B2_LSB4_20 PRM1.p1.o -eom4.f 2 0
+ad B2_LSB4_02 PRM1.p1.o -eom4.f 0 2
+
+
+## B4
+ad B4_USB1_10 PRM2.p3.o eom1.f 1 0
+ad B4_USB1_01 PRM2.p3.o eom1.f 0 1
+ad B4_USB1_20 PRM2.p3.o eom1.f 2 0
+ad B4_USB1_02 PRM2.p3.o eom1.f 0 2
+
+ad B4_LSB1_10 PRM2.p3.o -eom1.f 1 0
+ad B4_LSB1_01 PRM2.p3.o -eom1.f 0 1
+ad B4_LSB1_20 PRM2.p3.o -eom1.f 2 0
+ad B4_LSB1_02 PRM2.p3.o -eom1.f 0 2
+
+ad B4_USB2_10 PRM2.p3.o eom2.f 1 0
+ad B4_USB2_01 PRM2.p3.o eom2.f 0 1
+ad B4_USB2_20 PRM2.p3.o eom2.f 2 0
+ad B4_USB2_02 PRM2.p3.o eom2.f 0 2
+
+ad B4_LSB2_10 PRM2.p3.o -eom2.f 1 0
+ad B4_LSB2_01 PRM2.p3.o -eom2.f 0 1
+ad B4_LSB2_20 PRM2.p3.o -eom2.f 2 0
+ad B4_LSB2_02 PRM2.p3.o -eom2.f 0 2
+
+ad B4_USB4_10 PRM2.p3.o eom4.f 1 0
+ad B4_USB4_01 PRM2.p3.o eom4.f 0 1
+ad B4_USB4_20 PRM2.p3.o eom4.f 2 0
+ad B4_USB4_02 PRM2.p3.o eom4.f 0 2
+
+ad B4_LSB4_10 PRM2.p3.o -eom4.f 1 0
+ad B4_LSB4_01 PRM2.p3.o -eom4.f 0 1
+ad B4_LSB4_20 PRM2.p3.o -eom4.f 2 0
+ad B4_LSB4_02 PRM2.p3.o -eom4.f 0 2
+
+
+## B1p
+ad B1p_USB1_10 SRM1.p2.o eom1.f 1 0
+ad B1p_USB1_01 SRM1.p2.o eom1.f 0 1
+ad B1p_USB1_20 SRM1.p2.o eom1.f 2 0
+ad B1p_USB1_02 SRM1.p2.o eom1.f 0 2
+
+ad B1p_LSB1_10 SRM1.p2.o -eom1.f 1 0
+ad B1p_LSB1_01 SRM1.p2.o -eom1.f 0 1
+ad B1p_LSB1_20 SRM1.p2.o -eom1.f 2 0
+ad B1p_LSB1_02 SRM1.p2.o -eom1.f 0 2
+
+ad B1p_USB2_10 SRM1.p2.o eom2.f 1 0
+ad B1p_USB2_01 SRM1.p2.o eom2.f 0 1
+ad B1p_USB2_20 SRM1.p2.o eom2.f 2 0
+ad B1p_USB2_02 SRM1.p2.o eom2.f 0 2
+
+ad B1p_LSB2_10 SRM1.p2.o -eom2.f 1 0
+ad B1p_LSB2_01 SRM1.p2.o -eom2.f 0 1
+ad B1p_LSB2_20 SRM1.p2.o -eom2.f 2 0
+ad B1p_LSB2_02 SRM1.p2.o -eom2.f 0 2
+
+ad B1p_USB3_10 SRM1.p2.o eom3.f 1 0
+ad B1p_USB3_01 SRM1.p2.o eom3.f 0 1
+ad B1p_LSB3_10 SRM1.p2.o -eom3.f 1 0
+ad B1p_LSB3_01 SRM1.p2.o -eom3.f 0 1
+
+ad B1p_USB4_10 SRM1.p2.o eom4.f 1 0
+ad B1p_USB4_01 SRM1.p2.o eom4.f 0 1
+ad B1p_USB4_20 SRM1.p2.o eom4.f 2 0
+ad B1p_USB4_02 SRM1.p2.o eom4.f 0 2
+
+ad B1p_LSB4_10 SRM1.p2.o -eom4.f 1 0
+ad B1p_LSB4_01 SRM1.p2.o -eom4.f 0 1
+ad B1p_LSB4_20 SRM1.p2.o -eom4.f 2 0
+ad B1p_LSB4_02 SRM1.p2.o -eom4.f 0 2

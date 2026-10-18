@@ -1,0 +1,24 @@
+s sB2_to_bench B2_pickoff.p2 B2_split.p1 L=0
+bs B2_split R=0.5 T=0.5 alpha=45
+s B2_nf_tele B2_split.p2 B2_nf_port.p1 user_gouy_x=0 user_gouy_y=0
+s B2_ff_tele B2_split.p3 B2_ff_port.p1 user_gouy_x=90 user_gouy_y=90
+
+s sB4_to_bench PRM2.p4 B4_split.p1 L=0
+bs B4_split R=0.5 T=0.5 alpha=45
+s B4_nf_tele B4_split.p2 B4_nf_port.p1 user_gouy_x=0 user_gouy_y=0
+s B4_ff_tele B4_split.p3 B4_ff_port.p1 user_gouy_x=90 user_gouy_y=90
+
+s sB1p_to_bench SRM1.p2 B1p_split.p1 L=0
+bs B1p_split R=0.5 T=0.5 alpha=45
+s B1p_nf_tele B1p_split.p2 B1p_nf_port.p1 user_gouy_x=0 user_gouy_y=0
+s B1p_ff_tele B1p_split.p3 B1p_ff_port.p1 user_gouy_x=90 user_gouy_y=90
+
+s sB7_to_bench NETM.p2 B7_split.p1 L=0
+bs B7_split R=0.5 T=0.5 alpha=45
+s B7_nf_tele B7_split.p2 B7_nf_port.p1 user_gouy_x=0 user_gouy_y=0
+s B7_ff_tele B7_split.p3 B7_ff_port.p1 user_gouy_x=90 user_gouy_y=90
+
+s sB8_to_bench WETM.p2 B8_split.p1 L=0
+bs B8_split R=0.5 T=0.5 alpha=45
+s B8_nf_tele B8_split.p2 B8_nf_port.p1 user_gouy_x=0 user_gouy_y=0
+s B8_ff_tele B8_split.p3 B8_ff_port.p1 user_gouy_x=90 user_gouy_y=90

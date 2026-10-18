@@ -1,0 +1,54 @@
+## B2
+
+pd1 B2_nf_SB1_I B2_nf_port.p1.i f=eom1.f phase=0 pdtype=xsplit
+pd1 B2_nf_SB1_Q B2_nf_port.p1.i f=eom1.f phase=90 pdtype=xsplit
+pd1 B2_ff_SB1_I B2_ff_port.p1.i f=eom1.f phase=0 pdtype=xsplit
+pd1 B2_ff_SB1_Q B2_ff_port.p1.i f=eom1.f phase=90 pdtype=xsplit
+
+pd1 B2_nf_SB2_I B2_nf_port.p1.i f=eom2.f phase=0 pdtype=xsplit
+pd1 B2_nf_SB2_Q B2_nf_port.p1.i f=eom2.f phase=90 pdtype=xsplit
+pd1 B2_ff_SB2_I B2_ff_port.p1.i f=eom2.f phase=0 pdtype=xsplit
+pd1 B2_ff_SB2_Q B2_ff_port.p1.i f=eom2.f phase=90 pdtype=xsplit
+
+pd1 B2_nf_SB4_I B2_nf_port.p1.i f=eom4.f phase=0 pdtype=xsplit
+pd1 B2_nf_SB4_Q B2_nf_port.p1.i f=eom4.f phase=90 pdtype=xsplit
+pd1 B2_ff_SB4_I B2_ff_port.p1.i f=eom4.f phase=0 pdtype=xsplit
+pd1 B2_ff_SB4_Q B2_ff_port.p1.i f=eom4.f phase=90 pdtype=xsplit
+
+
+## B4
+
+pd1 B4_nf_SB1_I B4_nf_port.p1.i f=eom1.f phase=0 pdtype=xsplit
+pd1 B4_nf_SB1_Q B4_nf_port.p1.i f=eom1.f phase=90 pdtype=xsplit
+pd1 B4_ff_SB1_I B4_ff_port.p1.i f=eom1.f phase=0 pdtype=xsplit
+pd1 B4_ff_SB1_Q B4_ff_port.p1.i f=eom1.f phase=90 pdtype=xsplit
+
+pd1 B4_nf_SB2_I B4_nf_port.p1.i f=eom2.f phase=0 pdtype=xsplit
+pd1 B4_nf_SB2_Q B4_nf_port.p1.i f=eom2.f phase=90 pdtype=xsplit
+pd1 B4_ff_SB2_I B4_ff_port.p1.i f=eom2.f phase=0 pdtype=xsplit
+pd1 B4_ff_SB2_Q B4_ff_port.p1.i f=eom2.f phase=90 pdtype=xsplit
+
+pd1 B4_nf_SB4_I B4_nf_port.p1.i f=eom4.f phase=0 pdtype=xsplit
+pd1 B4_nf_SB4_Q B4_nf_port.p1.i f=eom4.f phase=90 pdtype=xsplit
+pd1 B4_ff_SB4_I B4_ff_port.p1.i f=eom4.f phase=0 pdtype=xsplit
+pd1 B4_ff_SB4_Q B4_ff_port.p1.i f=eom4.f phase=90 pdtype=xsplit
+
+
+## B1p
+
+pd1 B1p_nf_SB1_I B1p_nf_port.p1.i f=eom1.f phase=0 pdtype=xsplit
+pd1 B1p_nf_SB1_Q B1p_nf_port.p1.i f=eom1.f phase=90 pdtype=xsplit
+pd1 B1p_ff_SB1_I B1p_ff_port.p1.i f=eom1.f phase=0 pdtype=xsplit
+pd1 B1p_ff_SB1_Q B1p_ff_port.p1.i f=eom1.f phase=90 pdtype=xsplit
+
+pd1 B1p_nf_SB2_I B1p_nf_port.p1.i f=eom2.f phase=0 pdtype=xsplit
+pd1 B1p_nf_SB2_Q B1p_nf_port.p1.i f=eom2.f phase=90 pdtype=xsplit
+pd1 B1p_ff_SB2_I B1p_ff_port.p1.i f=eom2.f phase=0 pdtype=xsplit
+pd1 B1p_ff_SB2_Q B1p_ff_port.p1.i f=eom2.f phase=90 pdtype=xsplit
+
+pd1 B1p_nf_SB4_I B1p_nf_port.p1.i f=eom4.f phase=0 pdtype=xsplit
+pd1 B1p_nf_SB4_Q B1p_nf_port.p1.i f=eom4.f phase=90 pdtype=xsplit
+pd1 B1p_ff_SB4_I B1p_ff_port.p1.i f=eom4.f phase=0 pdtype=xsplit
+pd1 B1p_ff_SB4_Q B1p_ff_port.p1.i f=eom4.f phase=90 pdtype=xsplit
+
+

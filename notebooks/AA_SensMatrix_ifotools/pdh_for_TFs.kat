@@ -1,0 +1,38 @@
+#PDH detectors SB1
+pd2 B2_SB1_I_TF  B2_pickoff.p4.o eom1.f phase1=0 f2=fsig.f
+pd2 B2_SB1_Q_TF  B2_pickoff.p4.o eom1.f phase1=90 f2=fsig.f
+
+pd2 B4_SB1_I_TF  PRM2.p3.o eom1.f phase1=0 f2=fsig.f
+pd2 B4_SB1_Q_TF  PRM2.p3.o eom1.f phase1=90 f2=fsig.f
+
+pd2 B1p_SB1_I_TF B1p_pickoff.p2.o eom1.f phase1=0 f2=fsig.f
+pd2 B1p_SB1_Q_TF B1p_pickoff.p2.o eom1.f phase1=90 f2=fsig.f
+
+pd2 B6_SB1_I_TF  SRM2.p1.o eom1.f phase1=0 f2=fsig.f
+pd2 B6_SB1_Q_TF  SRM2.p1.o eom1.f phase1=90 f2=fsig.f
+
+#PDH detectors SB2
+pd2 B2_SB2_I_TF  B2_pickoff.p4.o eom2.f phase1=0 f2=fsig.f
+pd2 B2_SB2_Q_TF  B2_pickoff.p4.o eom2.f phase1=90 f2=fsig.f
+
+pd2 B4_SB2_I_TF  PRM2.p3.o eom2.f phase1=0 f2=fsig.f
+pd2 B4_SB2_Q_TF  PRM2.p3.o eom2.f phase1=90 f2=fsig.f
+
+pd2 B1p_SB2_I_TF B1p_pickoff.p2.o eom2.f phase1=0 f2=fsig.f
+pd2 B1p_SB2_Q_TF B1p_pickoff.p2.o eom2.f phase1=90 f2=fsig.f
+
+pd2 B6_SB2_I_TF  SRM2.p1.o eom2.f phase1=0 f2=fsig.f
+pd2 B6_SB2_Q_TF  SRM2.p1.o eom2.f phase1=90 f2=fsig.f
+
+#PDH detectors SB4
+pd2 B2_SB4_I_TF  B2_pickoff.p4.o eom4.f phase1=0 f2=fsig.f
+pd2 B2_SB4_Q_TF  B2_pickoff.p4.o eom4.f phase1=90 f2=fsig.f
+
+pd2 B4_SB4_I_TF  PRM2.p3.o eom4.f phase1=0 f2=fsig.f
+pd2 B4_SB4_Q_TF  PRM2.p3.o eom4.f phase1=90 f2=fsig.f
+
+pd2 B1p_SB4_I_TF B1p_pickoff.p2.o eom4.f phase1=0 f2=fsig.f
+pd2 B1p_SB4_Q_TF B1p_pickoff.p2.o eom4.f phase1=90 f2=fsig.f
+
+pd2 B6_SB4_I_TF  SRM2.p1.o eom4.f phase1=0 f2=fsig.f
+pd2 B6_SB4_Q_TF  SRM2.p1.o eom4.f phase1=90 f2=fsig.f

@@ -1,0 +1,98 @@
+var R 1.19
+var ns 1.44963
+
+var IBshift_set 0
+var IBtilt_set 0
+var PRM1_set 0
+var PRM2_set 0
+var PRM3_set 0
+var BS_set 0
+var SRM1_set 0
+var SRM2_set 0 
+var SRM3_set 0
+var DIFFp_set 0
+var DIFFm_set 0
+var COMMp_set 0
+var COMMm_set 0
+
+l laser1 P=25                # laser with P = 25W at the default frequency
+
+#modulations
+mod eom1 f=6370710 midx=0.15 order=1
+mod eom2 f=27606410 midx=0.15 order=1
+mod eom3 f=78572090 midx=0.15 order=1
+mod eom4 f=15926775 midx=0.15 order=1
+
+link(laser1, 0.1, eom1, 0.1, eom2, 0.1, eom3, 0.1, eom4, 1, steer1.p1)
+
+
+## steering mirrors
+bs steer1 R=1 T=0 alpha=30           xbeta=IBshift_set
+s s2 steer1.p2 steer2.p1     L=5
+bs steer2 R=1 T=0 alpha=steer1.alpha xbeta=-IBshift_set+IBtilt_set
+s s3 steer2.p2 B2_pickoff.p1 L=5
+
+bs B2_pickoff R=0.001 L=0 alpha=45
+s s4 B2_pickoff.p3 PRM1.p1   L=5
+
+
+## PRC
+m PRM1  L=30e-6 T=0.04835 Rc=4.416 phi=135 xbeta=PRM1_set
+s L1_PRC PRM1.p2 PRM2.p1 L=7.9265
+bs PRM2 L=0     T=1e-4    Rc=-1.967        xbeta=PRM2_set
+s L2_PRC PRM2.p2 PRM3.p1 L=9.166
+bs PRM3 L=0     T=1e-4    Rc=20.0          xbeta=PRM3_set
+s L3_PRC PRM3.p2 BS.p1   L=12.300855
+
+
+## BS
+bs BS     L=30e-6 T=0.5012  alpha=45      xbeta=BS_set
+s sBSsub1 BS.p3 BSAR_N.p1 L=0.074459 nr=ns 
+s sBSsub2 BS.p4 BSAR_E.p1 L=0.074459 nr=ns 
+bs BSAR_N L=329u  R=329u    alpha=29.1951 xbeta=BS_set
+bs BSAR_E L=329u  R=329u    alpha=29.1951 xbeta=BS_set
+
+
+## Narm
+s lBS_NI BSAR_N.p3 NIAR.p1 L=5.616937
+
+m NIAR L=27e-6 R=32u     Rc=-1420 phi=-45 xbeta=1/R*DIFFp_set-1/R*DIFFm_set+1/R*COMMp_set-1/R*COMMm_set
+s sNIsub NIAR.p2 NITM.p1 L=0.20026  nr=ns
+m NITM L=27e-6 T=0.01377 Rc=-1420 phi=-45 xbeta=1/R*DIFFp_set-1/R*DIFFm_set+1/R*COMMp_set-1/R*COMMm_set
+
+s sNarm  NITM.p2 NETM.p1 L=2999.8
+m NETM L=27e-6 T=3.39e-6 Rc=1683  phi=-45 xbeta=DIFFp_set+DIFFm_set+COMMp_set+COMMm_set
+
+
+## Warm
+s lBS_WI  BS.p2    WIAR.p1 L=5.494737
+
+m WIAR L=27e-6 R=32u     Rc=-1420 phi=45  xbeta=1/R*DIFFp_set-1/R*DIFFm_set-1/R*COMMp_set+1/R*COMMm_set
+s sWIsub WIAR.p2 WITM.p1 L=0.20031 nr=ns
+m WITM L=27e-6 T=0.01375 Rc=-1420 phi=45  xbeta=1/R*DIFFp_set-1/R*DIFFm_set-1/R*COMMp_set+1/R*COMMm_set
+
+s sWarm  WITM.p2 WETM.p1 L=2999.8
+m WETM L=27e-6 T=4.3e-6  Rc=1683  phi=45  xbeta=DIFFp_set+DIFFm_set-COMMp_set-COMMm_set
+
+
+## SRC
+s L3_SRC BSAR_E.p3 SRM3.p1   L=13.544217
+bs SRM3 L=0     T=1e-4 Rc=22.6         xbeta=SRM3_set
+s L2_SRC SRM3.p2   SRM2.p1   L=10.3608
+bs SRM2 L=0     T=1e-4 Rc=-2.212       xbeta=SRM2_set
+s L1_SRC SRM2.p2   SRM1.p1   L=8.0952
+m  SRM1 L=30e-6 T=0.4  Rc=-7.907 phi=0 xbeta=SRM1_set
+
+s s5 SRM1.p2 B1p_pickoff.p1 L=0
+bs B1p_pickoff R=0.2 L=0 alpha=45
+
+
+## Gaussian Beam
+cav Narm NITM.p2.o
+cav Warm WITM.p2.o
+
+cav cavPRW PRM1.p2.o WITM.p1.i 
+cav cavPRN PRM1.p2.o NITM.p1.i 
+
+cav cavSRW SRM1.p1.o WITM.p1.i 
+cav cavSRN SRM1.p1.o NITM.p1.i 
